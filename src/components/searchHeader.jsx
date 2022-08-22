@@ -1,5 +1,4 @@
 import LoveIcon from "../icons/loveIcon";
-import Navbar from "./navbar";
 
 const { default: SearchIcon } = require("../icons/searchIcon");
 
