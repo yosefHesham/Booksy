@@ -5,5 +5,12 @@
 .d-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
-  gap: 10px;
+  gap: 30px;
+}
+
+.max-lines {
+  word-wrap: break-word;
+  overflow: hidden;
+  line-height: 1em;
+  max-height: 1em;
 }
