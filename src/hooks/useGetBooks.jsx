@@ -13,7 +13,6 @@ const fetchBooks = async ({
     const data = await getBooks(pageNumber);
     setData((prev) => [...prev, ...data["results"]]);
     setLoading(false);
-    console.log(hasMore);
     hasMore.current = data["next"] !== null;
   } catch (e) {
     setError(e.toString());
@@ -51,7 +50,11 @@ export default function useGetBooks() {
   };
   useEffect(() => {
     document.addEventListener("scroll", trackScrolling);
+
+    return () => {
+      document.removeEventListener("scroll", trackScrolling);
+    };
   }, []);
 
-  return [data, error, loading, pageNumber];
+  return [data, error, loading];
 }
