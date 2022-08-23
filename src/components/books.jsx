@@ -3,7 +3,7 @@ import Book from "./book";
 import SkeletonList from "./skeletonList";
 
 const BookList = () => {
-  const [data, error, loading, pageNumber] = useGetBooks();
+  const [data, error, loading] = useGetBooks();
 
   return (
     <>

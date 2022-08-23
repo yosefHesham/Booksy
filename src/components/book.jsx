@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Stars from "./stars";
 
 const Book = ({ title, image, isLast, authors }) => {
   return (
@@ -9,11 +9,7 @@ const Book = ({ title, image, isLast, authors }) => {
         <p className="max-lines">{title.split(":" || ";")[0]}</p>
         <p className="max-lines">{authors[0]?.name}</p>
       </div>
-      <div className="flex justify-start gap-2">
-        {[1, 2, 3, 4].map((n) => (
-          <FontAwesomeIcon icon="fa-solid fa-star" color="orange" />
-        ))}
-      </div>
+      <Stars></Stars>
     </article>
   );
 };

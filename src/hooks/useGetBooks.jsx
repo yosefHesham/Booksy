@@ -45,7 +45,6 @@ export default function useGetBooks() {
   const trackScrolling = () => {
     const lastEl = document.getElementById("root");
     if (isBottom(lastEl) && !loading) {
-      console.log("Fetching");
       setPageNumber((prev) => prev + 1);
     }
   };
