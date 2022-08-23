@@ -44,7 +44,8 @@ export default function useGetBooks() {
   };
   const trackScrolling = () => {
     const lastEl = document.getElementById("root");
-    if (isBottom(lastEl)) {
+    if (isBottom(lastEl) && !loading) {
+      console.log("Fetching");
       setPageNumber((prev) => prev + 1);
     }
   };
@@ -56,5 +57,5 @@ export default function useGetBooks() {
     };
   }, []);
 
-  return [data, error, loading];
+  return [data, error, loading, pageNumber];
 }
