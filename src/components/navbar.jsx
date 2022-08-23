@@ -20,10 +20,7 @@ function Navbar() {
       {navLinks.map((link) => (
         <li
           key={link.id}
-          style={{
-            fontWeight: "bold",
-            listStyle: "none",
-          }}
+          className="list-none font-bold flex flex-col items-center"
         >
           <button
             to={link.path}
@@ -32,6 +29,9 @@ function Navbar() {
             {" "}
             {link.text}
           </button>
+          {link.id === 1 && (
+            <div className=" w-2 h-2 rounded-full bg-primary shadow-black shadow-2xl"></div>
+          )}
         </li>
       ))}
     </ul>
