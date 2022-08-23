@@ -1,5 +1,3 @@
-import { NavLink, Router } from "react-router-dom";
-
 const navLinks = [
   {
     path: "/",

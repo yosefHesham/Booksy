@@ -15,6 +15,7 @@ const fetchBooks = async ({
     setLoading(false);
     hasMore.current = data["next"] !== null;
   } catch (e) {
+    setLoading(false);
     setError(e.toString());
   }
 };
@@ -54,6 +55,7 @@ export default function useGetBooks() {
     return () => {
       document.removeEventListener("scroll", trackScrolling);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return [data, error, loading, pageNumber];
