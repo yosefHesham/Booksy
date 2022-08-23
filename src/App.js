@@ -6,7 +6,7 @@ library.add(fas);
 
 function App() {
   return (
-    <main>
+    <main id="main">
       <Home></Home>
     </main>
   );

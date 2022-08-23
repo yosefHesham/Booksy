@@ -4,8 +4,8 @@
 
 .d-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  column-gap: 40px;
 }
 
 .max-lines {
@@ -13,4 +13,8 @@
   overflow: hidden;
   line-height: 1em;
   max-height: 1em;
+}
+
+.gap-row {
+  row-gap: 10px;
 }
