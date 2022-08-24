@@ -41,7 +41,7 @@ export default function useGetBooks() {
   }, [pageNumber]);
 
   const isBottom = (el) => {
-    return el.getBoundingClientRect().bottom - window.innerHeight < 10;
+    return el.getBoundingClientRect().bottom - window.innerHeight < 20;
   };
   const trackScrolling = () => {
     const lastEl = document.getElementById("root");
@@ -58,5 +58,5 @@ export default function useGetBooks() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return [data, error, loading, pageNumber];
+  return [data, error, loading];
 }
